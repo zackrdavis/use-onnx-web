@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { InferenceSession } from "onnxruntime-web";
+import { InferenceSession, Tensor as T } from "onnxruntime-web";
+
+export const Tensor = T;
 
 export type RunProps = {
   feeds: InferenceSession.OnnxValueMapType;
