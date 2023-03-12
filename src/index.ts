@@ -39,5 +39,5 @@ export const useOnnxWebSession = (
     return await session!.run(feeds, options);
   };
 
-  return requestInference;
+  return { requestInference };
 };
