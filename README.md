@@ -1,8 +1,8 @@
-# useOnnxWebSession
+# useOnnxWeb
 
 ## React hook for inference with [ONNX-Runtime web](https://onnxruntime.ai/docs/api/js/index.html)
 
-`useOnnxWebSession` manages an ONNX inference session using a model file that you provide, and accepts additional [options](https://onnxruntime.ai/docs/api/js/interfaces/InferenceSession.SessionOptions.html). It will re-initialize if the model file is changed. Only one session should exist in the app at a time.
+`useOnnxWeb` manages an ONNX inference session using a model file that you provide, and accepts additional [options](https://onnxruntime.ai/docs/api/js/interfaces/InferenceSession.SessionOptions.html). It will re-initialize if the model file is changed. Only one session should exist in the app at a time.
 
 It returns a single function, `runInference`, which accepts data input and [options](https://onnxruntime.ai/docs/api/js/interfaces/InferenceSession.RunOptions.html), and returns a promise that resolves to inference results. The input properties are determined when you create the model file.
 
@@ -15,21 +15,21 @@ Uncaught (in promise) Error: output [...] already has value: ...
 ## Installation
 
 ```bash
-$ npm install use-onnx-web-session
+$ npm install use-onnx-web
 ```
 
 ## Usage
 
 ```javascript
 import {
-  useOnnxWebSession,
+  useOnnxWeb,
   Tensor // For formatting input/output data.
   InferenceSession // For typing assistance.
-} from "./useOnnxWebSession";
+} from "use-onnx-web";
 
 const App = () => {
   // This model performs matrix multiplication.
-  const runInference = useOnnxWebSession("./model.onnx");
+  const runInference = useOnnxWeb("./model.onnx");
 
   useEffect(() => {
     const feeds = {
