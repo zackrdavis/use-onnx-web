@@ -1,7 +1,7 @@
 {
   "name": "use-onnx-web-session",
   "author": "Zack Davis <zackrdavis@gmail.com>",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "description": "React hook for initializing and using an inference session with ONNX-Runtime web",
   "license": "MIT",
   "repository": "zackrdavis/use-onnx-web-session",
