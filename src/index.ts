@@ -14,7 +14,7 @@ export { InferenceSession, Tensor };
  * ```
  * @returns A promise that resolves to the results of an inference run
  */
-export const useOnnxWebSession = (
+export const useOnnxWeb = (
   model: string,
   options: InferenceSession.SessionOptions = {
     executionProviders: ["webgl"],
