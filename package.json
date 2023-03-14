@@ -2,7 +2,7 @@
   "name": "use-onnx-web-session",
   "author": "Zack Davis <zackrdavis@gmail.com>",
   "version": "1.0.0",
-  "description": "React hook for initializing and using an inference session with ONNX-Runtime web",
+  "description": "React hook for inference with ONNX-Runtime web",
   "license": "MIT",
   "repository": "zackrdavis/use-onnx-web-session",
   "keywords": [
@@ -14,8 +14,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "dependencies": {
     "onnxruntime-web": "^1.14.0",
