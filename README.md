@@ -50,7 +50,7 @@ const App = () => {
   }, []);
 ```
 
-The `model.onnx` file used above could be created in PyTorch like this:
+The `model.onnx` file used above is included in this repository, but it could be created in PyTorch like this:
 
 ```python
 # set the trained model to inference mode

@@ -4,3 +4,5 @@ src
 .npmignore
 tsconfig.json
 package-lock.json
+model.onnx
+.DS_Store
