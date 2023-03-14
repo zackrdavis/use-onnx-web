@@ -1,7 +1,7 @@
 {
   "name": "use-onnx-web",
   "author": "Zack Davis <zackrdavis@gmail.com>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook for inference with ONNX-Runtime web",
   "license": "MIT",
   "repository": "zackrdavis/use-onnx-web",
