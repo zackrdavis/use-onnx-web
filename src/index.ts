@@ -4,6 +4,12 @@ import { InferenceSession, Tensor } from "onnxruntime-web";
 // re-export
 export { InferenceSession, Tensor };
 
+// export type for inference promise
+export type RunInference = (
+  feeds: InferenceSession.OnnxValueMapType,
+  options?: InferenceSession.RunOptions | undefined
+) => Promise<InferenceSession.OnnxValueMapType>;
+
 /**
  * @param model Path to .onnx model file
  * @param options [SessionOptions docs](https://onnxruntime.ai/docs/api/js/interfaces/InferenceSession.SessionOptions)
@@ -21,7 +27,7 @@ export const useOnnxWeb = (
     graphOptimizationLevel: "all",
   }
 ) => {
-  // Save the session create promise instead of the session itself.
+  // Save the session creation promise instead of the session itself.
   // If runInference is requested before the session is ready, wait for the session, then run it.
   const sessionPromise = useRef<Promise<InferenceSession>>();
 
@@ -45,5 +51,5 @@ export const useOnnxWeb = (
       }
     });
 
-  return runInference;
+  return { runInference };
 };
