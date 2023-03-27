@@ -23,8 +23,11 @@ $ npm install use-onnx-web
 ```javascript
 import {
   useOnnxWeb,
-  Tensor // For formatting input/output data.
-  InferenceSession // For typing assistance.
+  // Tensor class for formatting input/output data.
+  Tensor
+  // For typing assistance.
+  InferenceSession
+  RunInference
 } from "use-onnx-web";
 
 const App = () => {
