@@ -29,7 +29,7 @@ import {
 
 const App = () => {
   // This model performs matrix multiplication.
-  const runInference = useOnnxWeb("./model.onnx");
+  const { runInference } = useOnnxWeb("./model.onnx");
 
   useEffect(() => {
     const feeds = {
